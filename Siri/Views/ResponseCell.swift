@@ -9,8 +9,8 @@
 import UIKit
 
 class ResponseCell: UITableViewCell {
-    var questionAnswer: QuestionAnswer? {
-        didSet { textView.attributedText = questionAnswer?.attributed }
+    var item: QuestionAnswer? {
+        didSet { textView.attributedText = item?.attributed }
     }
     
     let bottomBorder: UIView = {
@@ -34,7 +34,6 @@ class ResponseCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubview(bottomBorder)
         addSubview(textView)
-        
         setupLayouts()
     }
     

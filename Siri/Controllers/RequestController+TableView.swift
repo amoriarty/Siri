@@ -1,5 +1,5 @@
 //
-//  ViewController+TableView.swift
+//  RequestController+TableView.swift
 //  Siri
 //
 //  Created by Alexandra Legent on 30/11/2017.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-extension ViewController {
+extension RequestController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return questionsAnswers.count
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ResponseCell
-        cell.questionAnswer = questionsAnswers[indexPath.item]
+        cell.item = items[indexPath.item]
         return cell
     }
 }

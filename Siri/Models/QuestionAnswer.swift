@@ -10,7 +10,7 @@ import UIKit
 
 struct QuestionAnswer {
     let question: String
-    let response: String
+    let answer: String
     
     var attributed: NSAttributedString {
         let attributed = NSMutableAttributedString(string: question, attributes: [
@@ -18,12 +18,12 @@ struct QuestionAnswer {
             .foregroundColor: UIColor.lightGray
         ])
         
-        let responseAttributed = NSAttributedString(string: "\n\(response)", attributes: [
+        let answerAttributed = NSAttributedString(string: "\n\(answer)", attributes: [
             .font: UIFont.systemFont(ofSize: 18),
             .foregroundColor: UIColor.black
         ])
         
-        attributed.append(responseAttributed)
+        attributed.append(answerAttributed)
         return attributed
     }
 }

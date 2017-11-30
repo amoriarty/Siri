@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RequestController.swift
 //  Siri
 //
 //  Created by Alexandra Legent on 29/11/2017.
@@ -7,18 +7,14 @@
 //
 
 import UIKit
+import RecastAI
+import ForecastIO
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RequestController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     let cellId = "cellId"
-    let questionsAnswers = [
-        QuestionAnswer(question: "What time is it ?", response: "08h42"),
-        QuestionAnswer(question: "Shall we dance ?", response: "I can't, I'm an iPhone"),
-        QuestionAnswer(question: "Siri, who is the prettier ?", response: "I don't have any info for that, but probably not you !"),
-        QuestionAnswer(question: "You say what what ?", response: "In the butt"),
-        QuestionAnswer(question: "lorem ipsum ?", response: "Quod saepe saepe vel ea fugit esse. Quisquam ducimus officia et porro temporibus sit. Perspiciatis iste est libero ratione beatae. Sunt non minus molestias explicabo tempora sint.Quod saepe saepe vel ea fugit esse. Quisquam ducimus officia et porro temporibus sit. Perspiciatis iste est libero ratione beatae. Sunt non minus molestias explicabo tempora sint.Quod saepe saepe vel ea fugit esse. Quisquam ducimus officia et porro temporibus sit. Perspiciatis iste est libero ratione beatae. Sunt non minus molestias explicabo tempora sint.Quod saepe saepe vel ea fugit esse. Quisquam ducimus officia et porro temporibus sit. Perspiciatis iste est libero ratione beatae. Sunt non minus molestias explicabo tempora sint.Quod saepe saepe vel ea fugit esse. Quisquam ducimus officia et porro temporibus sit. Perspiciatis iste est libero ratione beatae. Sunt non minus molestias explicabo tempora sint.Quod saepe saepe vel ea fugit esse. Quisquam ducimus officia et porro temporibus sit. Perspiciatis iste est libero ratione beatae. Sunt non minus molestias explicabo tempora sint.")
-    ]
+    var items = [QuestionAnswer]()
     
-    let questionField: UITextField = {
+    lazy var questionField: UITextField = {
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
         field.placeholder = "Ask me something ..."
@@ -26,10 +22,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         field.layer.borderWidth = 0.5
         field.layer.cornerRadius = 5
         field.font = .systemFont(ofSize: 22)
+        field.delegate = self
         return field
     }()
     
-    let askButton: UIButton = {
+    lazy var askButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Ask", for: .normal)
@@ -39,6 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         button.layer.borderWidth = 0.5
         button.layer.cornerRadius = 5
         button.titleLabel?.font = .systemFont(ofSize: 22)
+        button.addTarget(self, action: #selector(self.toggleAsk), for: .touchUpInside)
         return button
     }()
     
