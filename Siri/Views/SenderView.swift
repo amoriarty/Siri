@@ -20,6 +20,7 @@ class SenderView: UIView {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Enter your message here."
+        textField.returnKeyType = .send
         return textField
     }()
     

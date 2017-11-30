@@ -20,6 +20,7 @@
 		ECF63D061FD03A38003E6F75 /* ConversationController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF63D051FD03A38003E6F75 /* ConversationController+CollectionView.swift */; };
 		ECF63D081FD04419003E6F75 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF63D071FD04419003E6F75 /* MessageCell.swift */; };
 		ECF63D0A1FD06313003E6F75 /* ConversationController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF63D091FD06313003E6F75 /* ConversationController+Keyboard.swift */; };
+		ECF63D0C1FD06E4C003E6F75 /* ConversationController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF63D0B1FD06E4C003E6F75 /* ConversationController+TextField.swift */; };
 		ECF9ACDA1FCFE5C900AC37EB /* RequestController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF9ACD91FCFE5C900AC37EB /* RequestController+TableView.swift */; };
 		ECF9ACDE1FCFE8CB00AC37EB /* ResponseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF9ACDD1FCFE8CB00AC37EB /* ResponseCell.swift */; };
 		ECF9ACE11FCFEA7A00AC37EB /* QuestionAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF9ACE01FCFEA7A00AC37EB /* QuestionAnswer.swift */; };
@@ -48,6 +49,7 @@
 		ECF63D051FD03A38003E6F75 /* ConversationController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConversationController+CollectionView.swift"; sourceTree = "<group>"; };
 		ECF63D071FD04419003E6F75 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		ECF63D091FD06313003E6F75 /* ConversationController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConversationController+Keyboard.swift"; sourceTree = "<group>"; };
+		ECF63D0B1FD06E4C003E6F75 /* ConversationController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConversationController+TextField.swift"; sourceTree = "<group>"; };
 		ECF9ACD91FCFE5C900AC37EB /* RequestController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestController+TableView.swift"; sourceTree = "<group>"; };
 		ECF9ACDD1FCFE8CB00AC37EB /* ResponseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCell.swift; sourceTree = "<group>"; };
 		ECF9ACE01FCFEA7A00AC37EB /* QuestionAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswer.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				ECF9ACEB1FD019E200AC37EB /* RequestController+Request.swift */,
 				ECF9ACD91FCFE5C900AC37EB /* RequestController+TableView.swift */,
 				ECF63CF81FD02D6E003E6F75 /* ConversationController.swift */,
+				ECF63D0B1FD06E4C003E6F75 /* ConversationController+TextField.swift */,
 				ECF63D091FD06313003E6F75 /* ConversationController+Keyboard.swift */,
 				ECF63D051FD03A38003E6F75 /* ConversationController+CollectionView.swift */,
 			);
@@ -310,6 +313,7 @@
 				ECF63CFF1FD0335F003E6F75 /* SenderView.swift in Sources */,
 				ECF63D021FD0341A003E6F75 /* UIColor.swift in Sources */,
 				ECF9ACDE1FCFE8CB00AC37EB /* ResponseCell.swift in Sources */,
+				ECF63D0C1FD06E4C003E6F75 /* ConversationController+TextField.swift in Sources */,
 				EC411D201FCEE07500160EB1 /* RequestController.swift in Sources */,
 				ECF9ACE81FD0122D00AC37EB /* Location.swift in Sources */,
 				ECF9ACEA1FD013C900AC37EB /* DarkSpyService.swift in Sources */,

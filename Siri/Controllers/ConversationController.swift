@@ -8,37 +8,36 @@
 
 import UIKit
 
-class ConversationController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ConversationController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITextFieldDelegate {
     var senderBottomConstraint: NSLayoutConstraint?
     var collectionViewBottomConstraint: NSLayoutConstraint?
     let cellId = "reuseId"
-    let senderView = SenderView()
-    let messages: [Message] = [
-        Message(text: "Hey how are you", fromMe: true),
-        Message(text: "I'm seek as hell ...", fromMe: false),
-        Message(text: "And you, how are you ?", fromMe: false),
-        Message(text: "I'm find, hopefully. But I have a lot of works to finally display our conversations.", fromMe: true),
-        Message(text: "I think too, good luck with that !", fromMe: false),
-        Message(text: "Hey how are you", fromMe: true),
-        Message(text: "I'm seek as hell ...", fromMe: false),
-        Message(text: "And you, how are you ?", fromMe: false),
-        Message(text: "I'm find, hopefully. But I have a lot of works to finally display our conversations.", fromMe: true),
-        Message(text: "I think too, good luck with that !", fromMe: false),
-        Message(text: "Hey how are you", fromMe: true),
-        Message(text: "I'm seek as hell ...", fromMe: false),
-        Message(text: "And you, how are you ?", fromMe: false),
-        Message(text: "I'm find, hopefully. But I have a lot of works to finally display our conversations.", fromMe: true),
-        Message(text: "I think too, good luck with that !", fromMe: false),
-        Message(text: "Hey how are you", fromMe: true),
-        Message(text: "I'm seek as hell ...", fromMe: false),
-        Message(text: "And you, how are you ?", fromMe: false),
-        Message(text: "I'm find, hopefully. But I have a lot of works to finally display our conversations.", fromMe: true),
-        Message(text: "I think too, good luck with that !", fromMe: false),
-        Message(text: "Hey how are you", fromMe: true),
-        Message(text: "I'm seek as hell ...", fromMe: false),
-        Message(text: "And you, how are you ?", fromMe: false),
-        Message(text: "I'm find, hopefully. But I have a lot of works to finally display our conversations.", fromMe: true),
-        Message(text: "I think too, good luck with that !", fromMe: false),
+    var messages: [Message] = [
+//        Message(text: "Hey how are you", fromMe: true),
+//        Message(text: "I'm seek as hell ...", fromMe: false),
+//        Message(text: "And you, how are you ?", fromMe: false),
+//        Message(text: "I'm find, hopefully. But I have a lot of works to finally display our conversations.", fromMe: true),
+//        Message(text: "I think too, good luck with that !", fromMe: false),
+//        Message(text: "Hey how are you", fromMe: true),
+//        Message(text: "I'm seek as hell ...", fromMe: false),
+//        Message(text: "And you, how are you ?", fromMe: false),
+//        Message(text: "I'm find, hopefully. But I have a lot of works to finally display our conversations.", fromMe: true),
+//        Message(text: "I think too, good luck with that !", fromMe: false),
+//        Message(text: "Hey how are you", fromMe: true),
+//        Message(text: "I'm seek as hell ...", fromMe: false),
+//        Message(text: "And you, how are you ?", fromMe: false),
+//        Message(text: "I'm find, hopefully. But I have a lot of works to finally display our conversations.", fromMe: true),
+//        Message(text: "I think too, good luck with that !", fromMe: false),
+//        Message(text: "Hey how are you", fromMe: true),
+//        Message(text: "I'm seek as hell ...", fromMe: false),
+//        Message(text: "And you, how are you ?", fromMe: false),
+//        Message(text: "I'm find, hopefully. But I have a lot of works to finally display our conversations.", fromMe: true),
+//        Message(text: "I think too, good luck with that !", fromMe: false),
+//        Message(text: "Hey how are you", fromMe: true),
+//        Message(text: "I'm seek as hell ...", fromMe: false),
+//        Message(text: "And you, how are you ?", fromMe: false),
+//        Message(text: "I'm find, hopefully. But I have a lot of works to finally display our conversations.", fromMe: true),
+//        Message(text: "I think too, good luck with that !", fromMe: false),
     ]
     
     let collectionView: UICollectionView = {
@@ -49,6 +48,13 @@ class ConversationController: UIViewController, UICollectionViewDelegate, UIColl
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
         collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
         return collectionView
+    }()
+    
+    lazy var senderView: SenderView = {
+        let view = SenderView()
+        view.inputTextField.delegate = self
+        view.sendButton.addTarget(self, action: #selector(self.toggleSend), for: .touchUpInside)
+        return view
     }()
     
     override func viewDidLoad() {

@@ -22,9 +22,28 @@ class RecastService {
             
             guard let latitude = location["lat"] as? Double else { return }
             guard let longitude = location["lng"] as? Double else { return }
+            guard let raw = location["raw"] as? String else { return }
+            
             DispatchQueue.main.async {
-                completion(Location(latitude: latitude, longitude: longitude), nil)
+                completion(Location(latitude: latitude, longitude: longitude, raw: raw), nil)
             }
+        }) { error in
+            DispatchQueue.main.async { completion(nil, error) }
+        }
+    }
+    
+    func send(message: String, completion: @escaping (String?, Error?) -> Void) {
+        bot.textConverse(message, successHandler: { response in
+            guard let entities = response.entities else { return }
+            guard let intents = response.intents else { return }
+            guard let replies = response.replies else { return }
+            guard let language = response.language else { return }
+            
+            print("\n\n")
+            print(entities)
+            print(intents)
+            print(replies)
+            print(language)
         }) { error in
             DispatchQueue.main.async { completion(nil, error) }
         }
