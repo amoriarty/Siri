@@ -19,8 +19,7 @@ class TabBarController: UITabBarController {
     
     
     let conversationController: ConversationController = {
-        let layout = UICollectionViewFlowLayout()
-        let controller = ConversationController(collectionViewLayout: layout)
+        let controller = ConversationController()
         let image = UIImage(named: "QuestionAnswerIcon")
         controller.tabBarItem.title = "Conversation"
         controller.tabBarItem.image = image
@@ -30,5 +29,6 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewControllers = [requestController, conversationController]
+        tabBar.isTranslucent = false
     }
 }

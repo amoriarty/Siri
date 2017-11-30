@@ -16,7 +16,7 @@ class ResponseCell: UITableViewCell {
     let bottomBorder: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .black
+        view.backgroundColor = .siriLightGray
         return view
     }()
     

@@ -18,7 +18,7 @@ class RequestController: UIViewController, UITableViewDelegate, UITableViewDataS
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
         field.placeholder = "Ask me something ..."
-        field.layer.borderColor = UIColor.blue.cgColor
+        field.layer.borderColor = UIColor.siriLightBlue.cgColor
         field.layer.borderWidth = 0.5
         field.layer.cornerRadius = 5
         field.font = .systemFont(ofSize: 22)
@@ -32,9 +32,7 @@ class RequestController: UIViewController, UITableViewDelegate, UITableViewDataS
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Ask", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .blue
-        button.layer.borderColor = UIColor.blue.cgColor
-        button.layer.borderWidth = 0.5
+        button.backgroundColor = .siriLightBlue
         button.layer.cornerRadius = 5
         button.titleLabel?.font = .systemFont(ofSize: 22)
         button.addTarget(self, action: #selector(self.toggleAsk), for: .touchUpInside)

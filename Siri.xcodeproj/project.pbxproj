@@ -14,6 +14,12 @@
 		EC411D281FCEE07500160EB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC411D261FCEE07500160EB1 /* LaunchScreen.storyboard */; };
 		ECF63CF91FD02D6E003E6F75 /* ConversationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF63CF81FD02D6E003E6F75 /* ConversationController.swift */; };
 		ECF63CFD1FD02F47003E6F75 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF63CFC1FD02F47003E6F75 /* TabBarController.swift */; };
+		ECF63CFF1FD0335F003E6F75 /* SenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF63CFE1FD0335F003E6F75 /* SenderView.swift */; };
+		ECF63D021FD0341A003E6F75 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF63D011FD0341A003E6F75 /* UIColor.swift */; };
+		ECF63D041FD03919003E6F75 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF63D031FD03919003E6F75 /* Message.swift */; };
+		ECF63D061FD03A38003E6F75 /* ConversationController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF63D051FD03A38003E6F75 /* ConversationController+CollectionView.swift */; };
+		ECF63D081FD04419003E6F75 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF63D071FD04419003E6F75 /* MessageCell.swift */; };
+		ECF63D0A1FD06313003E6F75 /* ConversationController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF63D091FD06313003E6F75 /* ConversationController+Keyboard.swift */; };
 		ECF9ACDA1FCFE5C900AC37EB /* RequestController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF9ACD91FCFE5C900AC37EB /* RequestController+TableView.swift */; };
 		ECF9ACDE1FCFE8CB00AC37EB /* ResponseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF9ACDD1FCFE8CB00AC37EB /* ResponseCell.swift */; };
 		ECF9ACE11FCFEA7A00AC37EB /* QuestionAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF9ACE01FCFEA7A00AC37EB /* QuestionAnswer.swift */; };
@@ -36,6 +42,12 @@
 		EC411D291FCEE07500160EB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECF63CF81FD02D6E003E6F75 /* ConversationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationController.swift; sourceTree = "<group>"; };
 		ECF63CFC1FD02F47003E6F75 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		ECF63CFE1FD0335F003E6F75 /* SenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderView.swift; sourceTree = "<group>"; };
+		ECF63D011FD0341A003E6F75 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		ECF63D031FD03919003E6F75 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		ECF63D051FD03A38003E6F75 /* ConversationController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConversationController+CollectionView.swift"; sourceTree = "<group>"; };
+		ECF63D071FD04419003E6F75 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		ECF63D091FD06313003E6F75 /* ConversationController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConversationController+Keyboard.swift"; sourceTree = "<group>"; };
 		ECF9ACD91FCFE5C900AC37EB /* RequestController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestController+TableView.swift"; sourceTree = "<group>"; };
 		ECF9ACDD1FCFE8CB00AC37EB /* ResponseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCell.swift; sourceTree = "<group>"; };
 		ECF9ACE01FCFEA7A00AC37EB /* QuestionAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswer.swift; sourceTree = "<group>"; };
@@ -102,11 +114,20 @@
 				ECF9ACDF1FCFEA5600AC37EB /* Models */,
 				ECF9ACDC1FCFE8B900AC37EB /* Views */,
 				ECF9ACE41FD0110B00AC37EB /* Services */,
+				ECF63D001FD03402003E6F75 /* Toolbox */,
 				EC411D241FCEE07500160EB1 /* Assets.xcassets */,
 				EC411D261FCEE07500160EB1 /* LaunchScreen.storyboard */,
 				EC411D291FCEE07500160EB1 /* Info.plist */,
 			);
 			path = Siri;
+			sourceTree = "<group>";
+		};
+		ECF63D001FD03402003E6F75 /* Toolbox */ = {
+			isa = PBXGroup;
+			children = (
+				ECF63D011FD0341A003E6F75 /* UIColor.swift */,
+			);
+			path = Toolbox;
 			sourceTree = "<group>";
 		};
 		ECF9ACDB1FCFE8A900AC37EB /* Controllers */ = {
@@ -117,6 +138,8 @@
 				ECF9ACEB1FD019E200AC37EB /* RequestController+Request.swift */,
 				ECF9ACD91FCFE5C900AC37EB /* RequestController+TableView.swift */,
 				ECF63CF81FD02D6E003E6F75 /* ConversationController.swift */,
+				ECF63D091FD06313003E6F75 /* ConversationController+Keyboard.swift */,
+				ECF63D051FD03A38003E6F75 /* ConversationController+CollectionView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -125,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				ECF9ACDD1FCFE8CB00AC37EB /* ResponseCell.swift */,
+				ECF63CFE1FD0335F003E6F75 /* SenderView.swift */,
+				ECF63D071FD04419003E6F75 /* MessageCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -134,6 +159,7 @@
 			children = (
 				ECF9ACE01FCFEA7A00AC37EB /* QuestionAnswer.swift */,
 				ECF9ACE71FD0122D00AC37EB /* Location.swift */,
+				ECF63D031FD03919003E6F75 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -281,16 +307,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECF63CFF1FD0335F003E6F75 /* SenderView.swift in Sources */,
+				ECF63D021FD0341A003E6F75 /* UIColor.swift in Sources */,
 				ECF9ACDE1FCFE8CB00AC37EB /* ResponseCell.swift in Sources */,
 				EC411D201FCEE07500160EB1 /* RequestController.swift in Sources */,
 				ECF9ACE81FD0122D00AC37EB /* Location.swift in Sources */,
 				ECF9ACEA1FD013C900AC37EB /* DarkSpyService.swift in Sources */,
 				ECF9ACE31FCFFE8200AC37EB /* Configurations.swift in Sources */,
+				ECF63D061FD03A38003E6F75 /* ConversationController+CollectionView.swift in Sources */,
 				ECF63CF91FD02D6E003E6F75 /* ConversationController.swift in Sources */,
+				ECF63D0A1FD06313003E6F75 /* ConversationController+Keyboard.swift in Sources */,
 				EC411D1E1FCEE07500160EB1 /* AppDelegate.swift in Sources */,
 				ECF9ACE11FCFEA7A00AC37EB /* QuestionAnswer.swift in Sources */,
 				ECF9ACDA1FCFE5C900AC37EB /* RequestController+TableView.swift in Sources */,
 				ECF63CFD1FD02F47003E6F75 /* TabBarController.swift in Sources */,
+				ECF63D081FD04419003E6F75 /* MessageCell.swift in Sources */,
+				ECF63D041FD03919003E6F75 /* Message.swift in Sources */,
 				ECF9ACEC1FD019E200AC37EB /* RequestController+Request.swift in Sources */,
 				ECF9ACE61FD0112100AC37EB /* RecastService.swift in Sources */,
 			);
