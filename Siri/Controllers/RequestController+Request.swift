@@ -16,8 +16,10 @@ extension RequestController {
     
     @objc func toggleAsk() {
         questionField.resignFirstResponder()
+        
         guard let question = questionField.text, question.count > 0 else { return }
         
+        questionField.text = nil
         RecastService.shared.getLocation(for: question) { location, error in
             guard let location = location, error == nil else {
                 self.add(question: question)
@@ -37,7 +39,8 @@ extension RequestController {
 
     private func add(question: String, answer: String = "Error") {
         let item = QuestionAnswer(question: question, answer: answer)
+        let indexPath = IndexPath(item: 0, section: 0)
         items = [item] + items
-        tableView.reloadData()
+        tableView.insertRows(at: [indexPath], with: .automatic)
     }
 }

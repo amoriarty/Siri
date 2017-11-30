@@ -12,6 +12,8 @@
 		EC411D201FCEE07500160EB1 /* RequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC411D1F1FCEE07500160EB1 /* RequestController.swift */; };
 		EC411D251FCEE07500160EB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC411D241FCEE07500160EB1 /* Assets.xcassets */; };
 		EC411D281FCEE07500160EB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC411D261FCEE07500160EB1 /* LaunchScreen.storyboard */; };
+		ECF63CF91FD02D6E003E6F75 /* ConversationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF63CF81FD02D6E003E6F75 /* ConversationController.swift */; };
+		ECF63CFD1FD02F47003E6F75 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF63CFC1FD02F47003E6F75 /* TabBarController.swift */; };
 		ECF9ACDA1FCFE5C900AC37EB /* RequestController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF9ACD91FCFE5C900AC37EB /* RequestController+TableView.swift */; };
 		ECF9ACDE1FCFE8CB00AC37EB /* ResponseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF9ACDD1FCFE8CB00AC37EB /* ResponseCell.swift */; };
 		ECF9ACE11FCFEA7A00AC37EB /* QuestionAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF9ACE01FCFEA7A00AC37EB /* QuestionAnswer.swift */; };
@@ -32,6 +34,8 @@
 		EC411D241FCEE07500160EB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC411D271FCEE07500160EB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC411D291FCEE07500160EB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECF63CF81FD02D6E003E6F75 /* ConversationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationController.swift; sourceTree = "<group>"; };
+		ECF63CFC1FD02F47003E6F75 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		ECF9ACD91FCFE5C900AC37EB /* RequestController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestController+TableView.swift"; sourceTree = "<group>"; };
 		ECF9ACDD1FCFE8CB00AC37EB /* ResponseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCell.swift; sourceTree = "<group>"; };
 		ECF9ACE01FCFEA7A00AC37EB /* QuestionAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswer.swift; sourceTree = "<group>"; };
@@ -108,9 +112,11 @@
 		ECF9ACDB1FCFE8A900AC37EB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ECF63CFC1FD02F47003E6F75 /* TabBarController.swift */,
 				EC411D1F1FCEE07500160EB1 /* RequestController.swift */,
 				ECF9ACEB1FD019E200AC37EB /* RequestController+Request.swift */,
 				ECF9ACD91FCFE5C900AC37EB /* RequestController+TableView.swift */,
+				ECF63CF81FD02D6E003E6F75 /* ConversationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -280,9 +286,11 @@
 				ECF9ACE81FD0122D00AC37EB /* Location.swift in Sources */,
 				ECF9ACEA1FD013C900AC37EB /* DarkSpyService.swift in Sources */,
 				ECF9ACE31FCFFE8200AC37EB /* Configurations.swift in Sources */,
+				ECF63CF91FD02D6E003E6F75 /* ConversationController.swift in Sources */,
 				EC411D1E1FCEE07500160EB1 /* AppDelegate.swift in Sources */,
 				ECF9ACE11FCFEA7A00AC37EB /* QuestionAnswer.swift in Sources */,
 				ECF9ACDA1FCFE5C900AC37EB /* RequestController+TableView.swift in Sources */,
+				ECF63CFD1FD02F47003E6F75 /* TabBarController.swift in Sources */,
 				ECF9ACEC1FD019E200AC37EB /* RequestController+Request.swift in Sources */,
 				ECF9ACE61FD0112100AC37EB /* RecastService.swift in Sources */,
 			);

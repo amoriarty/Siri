@@ -23,6 +23,7 @@ class RequestController: UIViewController, UITableViewDelegate, UITableViewDataS
         field.layer.cornerRadius = 5
         field.font = .systemFont(ofSize: 22)
         field.delegate = self
+        field.returnKeyType = .send
         return field
     }()
     
