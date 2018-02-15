@@ -35,6 +35,7 @@
 		3B213D8F0606DE93B7E366B0 /* Pods-Siri.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Siri.release.xcconfig"; path = "Pods/Target Support Files/Pods-Siri/Pods-Siri.release.xcconfig"; sourceTree = "<group>"; };
 		73EEA4A9AAB5A592D0C3A94F /* Pods-Siri.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Siri.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Siri/Pods-Siri.debug.xcconfig"; sourceTree = "<group>"; };
 		B2E4FDCED387EA52DFBBA803 /* Pods_Siri.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Siri.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC0F193E2035956D003C674D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EC411D1A1FCEE07500160EB1 /* Siri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Siri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC411D1D1FCEE07500160EB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC411D1F1FCEE07500160EB1 /* RequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestController.swift; sourceTree = "<group>"; };
@@ -92,6 +93,7 @@
 		EC411D111FCEE07500160EB1 = {
 			isa = PBXGroup;
 			children = (
+				EC0F193E2035956D003C674D /* README.md */,
 				EC411D1C1FCEE07500160EB1 /* Siri */,
 				EC411D1B1FCEE07500160EB1 /* Products */,
 				0E5278B77D188AE3CF3B9A6F /* Pods */,
